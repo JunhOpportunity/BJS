@@ -1,3 +1,4 @@
+///////////////////////////////////////////////////////////////////
 // const는 변수를 만들 때 사용하는 것
 const a = 5;
 const b = 2;
@@ -18,10 +19,12 @@ But, 항상 const를 사용하고, 가끔 let을 사용하자. var은 절대 NO 
 console.log(a + b)
 console.log(a / b)
 
+///////////////////////////////////////////////////////////////////
 // null과 undefined의 차이
 const name = null; // 변수가 비어있지만, null값이 들어가있음
 let something; // 변수 안에 아무것도 넣지 않았으므로 undefined
 
+///////////////////////////////////////////////////////////////////
 // 배열
 const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
 console.log(daysOfWeek);
@@ -29,3 +32,25 @@ console.log(daysOfWeek);
 // 배열에 내용 추가
 daysOfWeek.push("sun");
 console.log(daysOfWeek);
+
+///////////////////////////////////////////////////////////////////
+// object
+// 객체 안에서 대입할 때는 '=' 대신 ':' 를 사용한다!
+const player = {
+    name: "junho",
+    points: 10,
+    fat: false
+};
+
+// 새로운 객체 추가
+player.lastName="pototo";
+console.log(player)
+
+///////////////////////////////////////////////////////////////////
+// function
+function sayHello(name) {
+    console.log("Hello your name is " + name);
+}
+
+sayHello("jj");
+
