@@ -1,16 +1,18 @@
-const h1 = document.querySelector(".hello h1");
 
-function wordClicked() {
-    const currentColor = h1.style.color;
-    let newColor;
-    if(currentColor === "blue"){
-        newColor = "tomato";
-    }
-    else {
-        newColor = "blue";
-    }
-    h1.style.color = newColor;
+const loginInput = document.querySelector("#login-form input");
+const loginForm = document.querySelector("#login-form")
+const link = document.querySelector("a")
+
+function onSubmit(events) {
+    events.preventDefault(); // 브라우저의 기본 행동들을 하지 못하게 하는 함수.
+    console.log(events);
 }
 
-h1.addEventListener("click", wordClicked);
+function linkClick(event) {
+    event.preventDefault();
+    console.log(event);
+    alert("click!");
+}
 
+loginForm.addEventListener("submit", onSubmit)
+link.addEventListener("click", linkClick)

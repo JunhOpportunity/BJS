@@ -54,3 +54,19 @@ window.addEventListener("resize", windowResize);
 window.addEventListener("copy", widnowCopy);
 window.addEventListener("offline", windowOffline);
 window.addEventListener("online", windowOnline);
+
+// css에서 글자 색깔 지정 후 js로 가져오기
+function wordClicked() {
+    // css의 클래스 이름을 한 글자라도 빼먹거나 잘못 쓸 경우 오류 발생.
+    // 게다가 어디에서 오류가 났는지도 확인이 힘듬.
+    // 따라서 클래스 이름을 담고있는 변수 하나 선언해서 그걸로 대체!
+    // const classNameCss = "active"
+    // if(h1.className === classNameCss) {
+    //     h1.className = ""
+    // } else {
+    //     h1.className = classNameCss
+    // }
+
+    // 위의 모든 코드를 한 코드로 압축 가능.
+    h1.classList.toggle("clicked");
+}
