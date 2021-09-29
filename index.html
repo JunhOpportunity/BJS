@@ -7,17 +7,19 @@
     <title>Document</title>
 </head>
 <body>
+    
     <!-- form의 기본 동작은 submit -->
-    <form id="login-form">
+    <form id="login-form" class=".Shidden">
         <input
             required
             maxlength="15" 
             type="text" 
             placeholder="What is your name?" 
         />
-        <button>Log In</button>
-    </div>
-    <a href="naver.com">Go to Naver</a>
+        <input type="submit" value="Log In" />
+        
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
     <script src="app.js"></script>
 </body>
 </html>
