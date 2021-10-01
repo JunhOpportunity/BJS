@@ -1,35 +1,20 @@
-const title = document.querySelector(".hello h1");
+const loginForm = document.getElementById("login-form");
+const loginInput = loginForm.querySelector("input");
+const loginButton = loginForm.querySelector("button");
 
-function titleClicked() {
-    const currentColor = title.style.color;
-    let newColor;
-    if(currentColor === "blue"){
-        newColor = "red";
+function loginButtonClick() {
+    const username = loginInput.value;
+    if (username === "") {
+        alert("Please write your name");
+    } else if(username.length > 15) {
+        alert("Your name is too long.")
     } else {
-        newColor = "blue";
+        console.log("Hello " + username)
     }
-    h1.style.color = newColor
+    
 }
 
-// function mouseEnter() {
-//     title.innerText = "Mouse is here"
-// }
+loginButton.addEventListener("click", loginButtonClick);
 
-// function mouseLeave() {
-//     title.innerText = "Mouse is gone"
-// }
 
-// function resized() {
-//     document.body.style.backgroundColor = "tomato";
-// }
 
-// function copied() {
-//     alert("Do Not Copy!");
-// }
-
-title.addEventListener("click", titleClicked);
-// title.addEventListener("mouseenter", mouseEnter);
-// title.addEventListener("mouseleave", mouseLeave);
-
-// window.addEventListener("resize", resized);
-// window.addEventListener("copy", copied);
